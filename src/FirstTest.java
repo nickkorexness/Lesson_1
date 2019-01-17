@@ -325,7 +325,33 @@ public class FirstTest {
 
 
 
+    @Test
+    public void ex6_title()
+    {
 
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text,'Search Wikipedia')]"),
+                "Cannot find search input",
+                5
+        );
+
+        waitForElementAndSendKeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Limassol",
+                "Cannot find search input",
+                10
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Limassol']"),
+                "Cannot find search input",
+                15
+        );
+
+        assertElementPresent(By.xpath("//*[@class='android.widget.TextView' and @index='1']"), "Can't find articles' title");
+
+
+    }
 
 
 
@@ -849,6 +875,9 @@ public class FirstTest {
         return element.getAttribute(attribute);
     }
 
-    
+    private void assertElementPresent (By by, String error_message)
+    {
+        WebElement element = driver.findElement(by);
+    }
 
 }
