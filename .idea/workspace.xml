@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbea93de-0223-45bd-bec0-7c6e848d78df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apks/org.wikipedia.apk" beforeDir="false" afterPath="$PROJECT_DIR$/apks/org.wikipedia.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koriagin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/koriagin.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="256" column="84" selection-start-line="256" selection-start-column="84" selection-end-line="256" selection-end-column="84" />
+            <state relative-caret-position="334">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,9 +154,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 32m 54s.xml">
-      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 39m 51s.xml">
       <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
     </history-entry>
@@ -185,6 +179,9 @@
       <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 12m 11s.xml">
+      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 17m 10s.xml">
       <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -217,8 +214,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="256" column="84" selection-start-line="256" selection-start-column="84" selection-end-line="256" selection-end-column="84" />
+        <state relative-caret-position="334">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
