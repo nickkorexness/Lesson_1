@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbea93de-0223-45bd-bec0-7c6e848d78df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,10 +17,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="226">
+              <caret line="338" column="18" lean-forward="true" selection-start-line="338" selection-start-column="18" selection-end-line="338" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1511#2194#0" />
+                <element signature="e#2201#3604#0" />
+                <element signature="e#3610#4046#0" />
+                <element signature="e#4050#9564#0" />
+                <element signature="method#FirstTest#0;class#FirstTest#0" />
+                <element signature="e#10594#11492#0" />
+                <element signature="e#11498#12593#0" />
+                <element signature="e#12603#13837#0" />
+                <element signature="e#13848#17062#0" />
+                <element signature="e#17073#18237#0" />
+                <element signature="e#18248#19437#0" />
+                <element signature="e#19447#21638#0" />
+                <element signature="e#21648#22939#0" />
+                <element signature="e#22951#23295#0" />
+                <element signature="e#23301#23441#0" />
+                <element signature="e#23447#23684#0" />
+                <element signature="e#23690#23958#0" />
+                <element signature="e#23964#24295#0" />
+                <element signature="e#24301#24544#0" />
+                <element signature="e#24550#25023#0" />
+                <element signature="e#25097#25521#0" />
+                <element signature="e#25527#26185#0" />
+                <element signature="e#26191#26323#0" />
+                <element signature="e#26329#26713#0" />
+                <element signature="e#26719#26982#0" />
               </folding>
             </state>
           </provider>
@@ -114,7 +140,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest.ex5_two_articles">
+  <component name="RunManager" selected="JUnit.FirstTest.ex6_title">
     <configuration name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson_1" />
       <option name="PACKAGE_NAME" value="" />
@@ -133,8 +159,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FirstTest.ex6_title" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="ex6_title" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTest.ex6_title" />
         <item itemvalue="JUnit.FirstTest.ex5_two_articles" />
         <item itemvalue="JUnit.FirstTest" />
       </list>
@@ -154,18 +191,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 39m 51s.xml">
-      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 43m 10s.xml">
-      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 47m 19s.xml">
-      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 50m 04s.xml">
-      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 54m 20s.xml">
       <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
     </history-entry>
@@ -183,6 +208,18 @@
     </history-entry>
     <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 17m 10s.xml">
       <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 41m 44s.xml">
+      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 42m 28s.xml">
+      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 44m 39s.xml">
+      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest_ex6_title - 2019.01.17 at 22h 45m 25s.xml">
+      <configuration name="FirstTest.ex6_title" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -214,10 +251,35 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="226">
+          <caret line="338" column="18" lean-forward="true" selection-start-line="338" selection-start-column="18" selection-end-line="338" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1511#2194#0" />
+            <element signature="e#2201#3604#0" />
+            <element signature="e#3610#4046#0" />
+            <element signature="e#4050#9564#0" />
+            <element signature="method#FirstTest#0;class#FirstTest#0" />
+            <element signature="e#10594#11492#0" />
+            <element signature="e#11498#12593#0" />
+            <element signature="e#12603#13837#0" />
+            <element signature="e#13848#17062#0" />
+            <element signature="e#17073#18237#0" />
+            <element signature="e#18248#19437#0" />
+            <element signature="e#19447#21638#0" />
+            <element signature="e#21648#22939#0" />
+            <element signature="e#22951#23295#0" />
+            <element signature="e#23301#23441#0" />
+            <element signature="e#23447#23684#0" />
+            <element signature="e#23690#23958#0" />
+            <element signature="e#23964#24295#0" />
+            <element signature="e#24301#24544#0" />
+            <element signature="e#24550#25023#0" />
+            <element signature="e#25097#25521#0" />
+            <element signature="e#25527#26185#0" />
+            <element signature="e#26191#26323#0" />
+            <element signature="e#26329#26713#0" />
+            <element signature="e#26719#26982#0" />
           </folding>
         </state>
       </provider>

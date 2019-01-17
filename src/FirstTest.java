@@ -24,7 +24,6 @@ public class FirstTest {
     public void setUp()throws Exception
     {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("deviceName","AndroidTestDevice");
         capabilities.setCapability("platformVersion","9");
@@ -33,10 +32,9 @@ public class FirstTest {
         capabilities.setCapability("appActivity",".main.MainActivity");
         capabilities.setCapability("app","/Users/nickolay/Lesson_1/apks/org.wikipedia.apk");
 
-        driver.rotate(ScreenOrientation.PORTRAIT);
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
-
+        driver.rotate(ScreenOrientation.PORTRAIT);
     }
 
     @After
@@ -72,7 +70,6 @@ public class FirstTest {
 
 
     }
-
 
     @Test
     public void ex3_cancel_search()
@@ -144,9 +141,7 @@ public class FirstTest {
                 10
         );
 
-
     }
-
 
     @Test
     public void ex5_two_articles()
@@ -185,14 +180,12 @@ public class FirstTest {
                 20
         );
 
-
         waitForElementAndClick(
                 //By.xpath("//*[@text='Add to reading list']"),
                 By.xpath("//*[@class='android.widget.LinearLayout' and @index='2']"),
                 "cant fing add to reading list button",
                 20
         );
-
 
         waitForElementAndClick(
                 By.id("org.wikipedia:id/onboarding_button"),
@@ -241,7 +234,6 @@ public class FirstTest {
                 "Cannot find search input",
                 10
         );
-
 
         waitForElementAndClick(
                 By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='JavaScript']"),
@@ -331,7 +323,7 @@ public class FirstTest {
     }
 
     @Test
-    public void ex6_title_assert()
+    public void ex6_title()
     {
 
         waitForElementAndClick(
@@ -347,48 +339,34 @@ public class FirstTest {
                 10
         );
 
+        assertElementPresent(By.xpath("//*[@class='android.widget.TextView' and @index='1']"));
+
 
     }
 
+    @Test
+    public void FirstTest()
+    {
 
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text,'Search Wikipedia')]"),
+                "Cannot find search input",
+                5
+        );
 
+        waitForElementAndSendKeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Java",
+                "Cannot find search input",
+                10
+        );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    @Test
-//    public void FirstTest()
-//    {
-//
-//        waitForElementAndClick(
-//                By.xpath("//*[contains(@text,'Search Wikipedia')]"),
-//                "Cannot find search input",
-//                5
-//        );
-//
-//        waitForElementAndSendKeys(
-//                By.xpath("//*[contains(@text,'Search…')]"),
-//                "Java",
-//                "Cannot find search input",
-//                10
-//        );
-//
-//        waitForElementPresent(
-//                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
-//                "Cant found 'Object-oriented programming language' text",
-//                30
-//        );
-//    }
+        waitForElementPresent(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
+                "Cant found 'Object-oriented programming language' text",
+                30
+        );
+    }
 
     @Test
     public void testCancelSearch()
@@ -502,7 +480,6 @@ public class FirstTest {
         );
     }
 
-
     @Test
     public void saveFirstArticleToMyList()
     {
@@ -600,7 +577,6 @@ public class FirstTest {
 
     }
 
-
     @Test
     public void testAmountOfNotEmptySearch()
     {
@@ -633,7 +609,6 @@ public class FirstTest {
                 amount_of_search_result > 0
         );
     }
-
 
     @Test
     public void testAmountOfEmptySearch()
@@ -767,11 +742,6 @@ public class FirstTest {
     }
 
 
-
-
-
-
-
     private WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds)
     {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
@@ -886,7 +856,6 @@ public class FirstTest {
             throw new AssertionError(default_message + " " + error_message);
         }
 
-
     }
 
     private String waitForElementAndGetAttribute(By by, String attribute, String error_message, long timeoutInSeconds)
@@ -894,4 +863,10 @@ public class FirstTest {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
         return element.getAttribute(attribute);
     }
+
+    private void assertElementPresent (By by)
+    {
+        WebElement element = driver.findElement(by);
+    }
+
 }
