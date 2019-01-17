@@ -19,6 +19,7 @@ import java.util.List;
 public class FirstTest {
     private AppiumDriver driver;
 
+
     @Before
     public void setUp()throws Exception
     {
@@ -31,6 +32,8 @@ public class FirstTest {
         capabilities.setCapability("appPackage","org.wikipedia");
         capabilities.setCapability("appActivity",".main.MainActivity");
         capabilities.setCapability("app","/Users/nickolay/Lesson_1/apks/org.wikipedia.apk");
+
+        driver.rotate(ScreenOrientation.PORTRAIT);
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 
