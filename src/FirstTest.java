@@ -24,6 +24,7 @@ public class FirstTest {
     public void setUp()throws Exception
     {
         DesiredCapabilities capabilities = new DesiredCapabilities();
+
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("deviceName","AndroidTestDevice");
         capabilities.setCapability("platformVersion","9");
@@ -32,8 +33,8 @@ public class FirstTest {
         capabilities.setCapability("appActivity",".main.MainActivity");
         capabilities.setCapability("app","/Users/nickolay/Lesson_1/apks/org.wikipedia.apk");
 
-
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+        driver.rotate(ScreenOrientation.PORTRAIT);
     }
 
     @After
