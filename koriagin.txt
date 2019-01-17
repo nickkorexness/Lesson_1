@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 https://github.com/nickkorexness/Lesson_1/commit/f1bdb27aff03ec5c5abde339e3c21570a33e7360
+=======
+https://github.com/nickkorexness/javaAppiumAutomation/commit/f1bdb27aff03ec5c5abde339e3c21570a33e7360
+>>>>>>> 636d06616a2bd8d4a1e6ea2fd7a9a99a3c56b99b
