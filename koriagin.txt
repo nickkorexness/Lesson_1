@@ -1,1 +1,1 @@
-https://github.com/nickkorexness/javaAppiumAutomation/commit/f1578f909bc995d59d084ca7a1028f43bf4910ce
+https://github.com/nickkorexness/Lesson_1/commit/f1bdb27aff03ec5c5abde339e3c21570a33e7360
