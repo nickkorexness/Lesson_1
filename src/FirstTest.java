@@ -322,27 +322,12 @@ public class FirstTest {
         );
     }
 
-    @Test
-    public void ex6_title()
-    {
-
-        waitForElementAndClick(
-                By.xpath("//*[contains(@text,'Search Wikipedia')]"),
-                "Cannot find search input",
-                5
-        );
-
-        waitForElementAndSendKeys(
-                By.xpath("//*[contains(@text,'Search…')]"),
-                "Limassol",
-                "Cannot find search input",
-                10
-        );
-
-        assertElementPresent(By.xpath("//*[@class='android.widget.TextView' and @index='1']"));
 
 
-    }
+
+
+
+
 
     @Test
     public void FirstTest()
@@ -803,7 +788,7 @@ public class FirstTest {
                 .perform();
     }
 
-    protected void swipeUpQick()
+    protected void swipeUpQuick()
     {
         swipeUp(200);
     }
@@ -818,7 +803,7 @@ public class FirstTest {
                 return;
             }
 
-            swipeUpQick();
+            swipeUpQuick();
             ++already_swiped;
         }
     }
@@ -864,9 +849,6 @@ public class FirstTest {
         return element.getAttribute(attribute);
     }
 
-    private void assertElementPresent (By by)
-    {
-        WebElement element = driver.findElement(by);
-    }
+    
 
 }

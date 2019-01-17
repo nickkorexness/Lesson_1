@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbea93de-0223-45bd-bec0-7c6e848d78df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,10 +16,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
+            <state relative-caret-position="252">
               <caret line="338" column="18" lean-forward="true" selection-start-line="338" selection-start-column="18" selection-end-line="338" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#663#1429#0" />
                 <element signature="e#1511#2194#0" />
                 <element signature="e#2201#3604#0" />
                 <element signature="e#3610#4046#0" />
@@ -34,7 +34,6 @@
                 <element signature="e#18248#19437#0" />
                 <element signature="e#19447#21638#0" />
                 <element signature="e#21648#22939#0" />
-                <element signature="e#22951#23295#0" />
                 <element signature="e#23301#23441#0" />
                 <element signature="e#23447#23684#0" />
                 <element signature="e#23690#23958#0" />
@@ -46,6 +45,8 @@
                 <element signature="e#26191#26323#0" />
                 <element signature="e#26329#26713#0" />
                 <element signature="e#26719#26982#0" />
+                <element signature="e#26217#26218#0" expanded="true" />
+                <element signature="e#26276#26277#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,12 +192,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 21h 54m 20s.xml">
-      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 01m 20s.xml">
-      <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FirstTest_ex5_two_articles - 2019.01.17 at 22h 03m 58s.xml">
       <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
     </history-entry>
@@ -219,6 +214,12 @@
       <configuration name="FirstTest.ex5_two_articles" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FirstTest_ex6_title - 2019.01.17 at 22h 45m 25s.xml">
+      <configuration name="FirstTest.ex6_title" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest_ex6_title - 2019.01.17 at 22h 46m 37s.xml">
+      <configuration name="FirstTest.ex6_title" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest_ex6_title - 2019.01.17 at 22h 52m 33s.xml">
       <configuration name="FirstTest.ex6_title" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -251,10 +252,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
+        <state relative-caret-position="252">
           <caret line="338" column="18" lean-forward="true" selection-start-line="338" selection-start-column="18" selection-end-line="338" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#663#1429#0" />
             <element signature="e#1511#2194#0" />
             <element signature="e#2201#3604#0" />
             <element signature="e#3610#4046#0" />
@@ -268,7 +270,6 @@
             <element signature="e#18248#19437#0" />
             <element signature="e#19447#21638#0" />
             <element signature="e#21648#22939#0" />
-            <element signature="e#22951#23295#0" />
             <element signature="e#23301#23441#0" />
             <element signature="e#23447#23684#0" />
             <element signature="e#23690#23958#0" />
@@ -280,6 +281,8 @@
             <element signature="e#26191#26323#0" />
             <element signature="e#26329#26713#0" />
             <element signature="e#26719#26982#0" />
+            <element signature="e#26217#26218#0" expanded="true" />
+            <element signature="e#26276#26277#0" expanded="true" />
           </folding>
         </state>
       </provider>
