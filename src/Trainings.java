@@ -100,20 +100,7 @@ public class Trainings extends CoreTestCase {
         System.out.println(title_expected);
     }
 
-    @Test
-    public void test_ex6_title()
-    {
-
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
-
-        SearchPageObject.initSearchInput();
-        SearchPageObject.typeSearchLine("Limassol");
-        SearchPageObject.clickByArticleWithSubstring("City in Cyprus");
-
-        ArticlePageObject ArticlePageObject = new ArticlePageObject(driver);
-        ArticlePageObject.checkArticleTitleWithTimeout(0);
-
-    }
+    
 
 //    @Test
 //    public void ex6_title_before_refactoring()
