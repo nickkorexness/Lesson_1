@@ -11,7 +11,9 @@ public class SearchPageObject extends MainPageObject {
         SEARCH_CANCEL_BTN = "org.wikipedia:id/search_close_btn",
         SEARCH_RESULT_BY_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='{SUBSTRING}']",
         NO_RESULT_LABEL = "//*[contains(@text,'No results found')]",
-        SEARCH_RESULT_ELEMENT = "//*[@resource-id='org.wikipedia:id/search_results_list']//*[@resource-id='org.wikipedia:id/page_list_item_container']";
+        SEARCH_RESULT_ELEMENT = "//*[@resource-id='org.wikipedia:id/search_results_list']//*[@resource-id='org.wikipedia:id/page_list_item_container']",
+        SEARCH_RESULT_ARTICLE_ELEMENT_0 = "//*[@class='android.widget.LinearLayout' and @index='0']",
+        SEARCH_RESULT_ARTICLE_ELEMENT_1 = "//*[@class='android.widget.LinearLayout' and @index='2']";
 
 
     /* template methods*/
@@ -20,6 +22,7 @@ public class SearchPageObject extends MainPageObject {
     {
         return SEARCH_RESULT_BY_SUBSTRING_TPL.replace("{SUBSTRING}", substring);
     }
+
 
     /* template methods*/
 
@@ -90,6 +93,17 @@ public class SearchPageObject extends MainPageObject {
     public void assertThereIsNoResultOfSearch()
     {
         this.assertElementNotPresent(By.xpath(SEARCH_RESULT_ELEMENT),"search results is still present");
+    }
+
+    public void checkNotEmptySearch()
+    {
+        //тут проверим наличие нескольких статей
+        this.waitForElementPresent(By.xpath(SEARCH_RESULT_ARTICLE_ELEMENT_0), "Can't finds articles - search result is empty", 10);
+
+        this.waitForElementPresent(
+                By.xpath(SEARCH_RESULT_ARTICLE_ELEMENT_1), "Can't finds articles - search result is empty", 10);
+
+
     }
 
 }

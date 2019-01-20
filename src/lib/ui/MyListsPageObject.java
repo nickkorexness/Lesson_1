@@ -13,7 +13,8 @@ public class MyListsPageObject extends MainPageObject {
 
     public final static String
         FOLDER_BY_NAME_TPL = "//*[@text='Learning programming']",
-        ARTICLE_BY_TITLE_TPL = "//*[@text ='{TITLE}']";
+        ARTICLE_BY_TITLE_TPL = "//*[@text ='{TITLE}']",
+        ARTICLE_TITLE = "//*[@resource-id='org.wikipedia:id/page_list_item_title' and @index='0']";
 
 
 
@@ -65,7 +66,10 @@ public class MyListsPageObject extends MainPageObject {
         );
     }
 
-
+    public void openArticle()
+    {
+        this.waitForElementAndClick(By.xpath(ARTICLE_TITLE), "Can't open first article on mylists screen", 5);
+    }
 
 
 

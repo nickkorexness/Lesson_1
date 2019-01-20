@@ -14,7 +14,10 @@ public class ArticlePageObject extends MainPageObject {
             GOT_IT_BTN = "org.wikipedia:id/onboarding_button",
             OK_BTN = "//*[@text ='OK']",
             MY_LIST_INPUT = "org.wikipedia:id/text_input",
-            ARTICLE_CLOSE_BTN = "//android.widget.ImageButton[@content-desc='Navigate up']";
+            ARTICLE_CLOSE_BTN = "//android.widget.ImageButton[@content-desc='Navigate up']",
+            MYLIST_FOLDER_ELEMENT= "//*[@resource-id='org.wikipedia:id/item_container' and @index='0']";
+
+
 
 
     public ArticlePageObject(AppiumDriver driver)
@@ -42,7 +45,7 @@ public class ArticlePageObject extends MainPageObject {
         );
     }
 
-    public void addArticleToMyList (String name_of_folder)
+    public void addFirstArticleToMyList(String name_of_folder)
     {
         this.waitForElementAndClick(
                 By.xpath(MORE_OPTIONS_BTN),
@@ -83,6 +86,25 @@ public class ArticlePageObject extends MainPageObject {
         );
     }
 
+    public void addtArticleToMyList(String name_of_folder)
+    {
+        this.waitForElementAndClick(
+                By.xpath(MORE_OPTIONS_BTN),
+                "Cant find 'more option' button",
+                15
+        );
+
+        this.waitForElementAndClick(
+                By.xpath(ADD_TO_READING_LIST_BTN),
+                "Cant find 'add ro reading list' button",
+                15
+        );
+
+        this.waitForElementAndClick(By.xpath(MYLIST_FOLDER_ELEMENT),
+                "Cant find foder to adding to my Lists",
+                5);
+    }
+
     public void closeArticle()
     {
         this.waitForElementAndClick(
@@ -90,6 +112,10 @@ public class ArticlePageObject extends MainPageObject {
                 "Cant close the article",
                 15
         );
+    }
 
+    public void checkArticleTitleWithTimeout(int timeout)
+    {
+        this.waitForElementPresent(By.id(ARTICLE_CLOSE_BTN),"cant find article element on article page with "+ timeout + " timeout", timeout);
     }
 }
