@@ -114,5 +114,8 @@ public class ArticlePageObject extends MainPageObject {
         );
     }
 
-
+    public void checkArticleTitleWithTimeout(int timeout)
+    {
+        this.waitForElementPresent(By.id(ARTICLE_TITLE_ELEMENT),"cant find article element on article page with "+ timeout + " timeout", timeout);
+    }
 }
