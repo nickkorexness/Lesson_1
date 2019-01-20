@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbea93de-0223-45bd-bec0-7c6e848d78df" name="Default Changelist" comment="" />
+    <list default="true" id="cbea93de-0223-45bd-bec0-7c6e848d78df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Trainings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trainings.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,15 +13,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Trainings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="102" column="4" lean-forward="true" selection-start-line="102" selection-start-column="4" selection-end-line="115" selection-end-column="5" />
+            <state relative-caret-position="97">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#185#196#0" />
                 <element signature="e#3610#4046#0" />
+                <element signature="e#4050#9564#0" />
+                <element signature="e#3373#3806#0" />
               </folding>
             </state>
           </provider>
@@ -118,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="119" selection-end-column="5" />
+            <state relative-caret-position="1755">
+              <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#276#277#0" expanded="true" />
@@ -178,8 +182,8 @@
         <option value="$PROJECT_DIR$/src/lib/tests/SearchTests.java" />
         <option value="$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java" />
         <option value="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" />
-        <option value="$PROJECT_DIR$/src/Trainings.java" />
         <option value="$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java" />
+        <option value="$PROJECT_DIR$/src/Trainings.java" />
       </list>
     </option>
   </component>
@@ -262,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Trainings.test_ex6_title">
+  <component name="RunManager" selected="JUnit.Trainings.test_ex3_cancel_search">
     <configuration name="Trainings.ex3_cancel_search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson_1" />
       <option name="PACKAGE_NAME" value="" />
@@ -283,11 +287,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Trainings.testArticleTitleAfterBackgroundSending" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Trainings.test_ex3_cancel_search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Trainings" />
-      <option name="METHOD_NAME" value="testArticleTitleAfterBackgroundSending" />
+      <option name="METHOD_NAME" value="test_ex3_cancel_search" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -315,11 +319,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Trainings.test_ex3_cancel_search" />
         <item itemvalue="JUnit.Trainings.test_ex6_title" />
         <item itemvalue="JUnit.Trainings.ex6_title" />
         <item itemvalue="JUnit.Trainings.test_ex5_two_articles" />
         <item itemvalue="JUnit.Trainings.ex3_cancel_search" />
-        <item itemvalue="JUnit.Trainings.testArticleTitleAfterBackgroundSending" />
       </list>
     </recent_temporary>
   </component>
@@ -514,26 +518,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Trainings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="102" column="4" lean-forward="true" selection-start-line="102" selection-start-column="4" selection-end-line="115" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#185#196#0" />
-            <element signature="e#3610#4046#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="119" selection-end-column="5" />
+        <state relative-caret-position="1755">
+          <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#276#277#0" expanded="true" />
             <element signature="e#305#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Trainings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#185#196#0" />
+            <element signature="e#3610#4046#0" />
+            <element signature="e#4050#9564#0" />
+            <element signature="e#3373#3806#0" />
           </folding>
         </state>
       </provider>
