@@ -1,7 +1,6 @@
 import lib.CoreTestCase;
 import lib.ui.*;
 import org.junit.Test;
-import org.openqa.selenium.WebElement;
 
 
 public class Trainings extends CoreTestCase {
@@ -109,42 +108,19 @@ public class Trainings extends CoreTestCase {
     @Test
     public void test_ex4_check_words_in_search()
     {
-
+        //ищем слово и проверяем его наличие в результатах поиска
+        //открываем поиск и вводим строку для поиска
         SearchPageObject SearchPageObject = new SearchPageObject(driver);
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Java");
-        SearchPageObject.compareSearchResults("Java");
+        SearchPageObject.checkAllSearchResultsWithJava();
         }
 
 
 
     }
 
-//    @Test
-//    public void ex6_title_before_refactoring()
-//    {
-//
-//        MainPageObject.waitForElementAndClick(
-//                By.xpath("//*[contains(@text,'Search Wikipedia')]"),
-//                "Cannot find search input",
-//                5
-//        );
-//
-//        MainPageObject.waitForElementAndSendKeys(
-//                By.xpath("//*[contains(@text,'Search…')]"),
-//                "Limassol",
-//                "Cannot find search input",
-//                10
-//        );
-//
-//        MainPageObject.waitForElementAndClick(
-//                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Limassol']"),
-//                "Cannot find search input",
-//                15
-//        );
-//
-//        MainPageObject.assertElementPresent(By.xpath("//*[@class='android.widget.TextView' and @index='1']"));
-//
-//
-//    }
+
+
+
 

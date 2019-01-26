@@ -1,0 +1,38 @@
+Find a quick fact, or dive down a Wikipedia rabbit hole with the official Wikipedia app for iOS. With more than 39 million articles in nearly 300 languages, your favorite free online encyclopedia is at your fingertips. 
+
+App features: 
+
+Explore feed - Discover the depths of Wikipedia through your explore feed, which surfaces handcrafted articles and captivating photos. The feed is constantly updated and includes:  
+
+- recommended articles based on what you’ve already read
+- featured articles hand-picked by the Wikipedia community
+- daily top read articles 
+- picture of the day
+- random articles
+- nearby landmarks 
+
+Find and search -  Easily find what you’re looking for by searching within articles or using Spotlight. You can even search with your favorite emojis! 
+
+Quick access - Add Wikipedia to your device's Today screen to pick up exactly where you stopped reading your last article, or see the top-read articles and trends.
+
+Easy touch navigation, including 3D touch - Multi-touch gestures like swipe, tap, and 3D Touch features complete essential tasks more quickly and simply. 
+ 
+Save articles - Save articles for reading later, even when you’re offline. 
+
+Multilingual support - Search for and read Wikipedia articles written in any Wikipedia-supported language — there are nearly 300! 
+
+Share - Easily share articles, images, and facts from Wikipedia on social media or by email. Or use Handoff to continue reading articles across your iOS devices.
+
+Want to know more behind the scenes of the Wikipedia mobile app for iOS? Check out these resources:
+
+To send feedback, from the app tap:
+Settings Gear > Send app feedback
+
+Contribute to our app localizations:
+https://translatewiki.net/wiki/Translating:WikimediaMobile
+
+Code at GitHub open source repository:
+https://github.com/wikimedia/apps-ios-wikipedia
+
+About the Wikimedia Foundation 
+The Wikimedia Foundation is a nonprofit organization that supports and operates Wikipedia and the other Wikimedia projects. The Wikimedia Foundation is a charitable organization funded mainly through donations. For more information, please visit our website: https://wikimediafoundation.org/wiki/Home.

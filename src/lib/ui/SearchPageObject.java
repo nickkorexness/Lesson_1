@@ -3,8 +3,13 @@ package lib.ui;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static junit.framework.TestCase.assertEquals;
+import java.util.ArrayList;
+import java.util.List;
+
+import static junit.framework.TestCase.assertTrue;
 
 public class SearchPageObject extends MainPageObject {
 
@@ -18,6 +23,7 @@ public class SearchPageObject extends MainPageObject {
         SEARCH_RESULT_ARTICLE_ELEMENT_0 = "//*[@class='android.widget.LinearLayout' and @index='0']",
         SEARCH_RESULT_ARTICLE_ELEMENT_1 = "//*[@class='android.widget.LinearLayout' and @index='2']",
         SEARCH_RESULT_ARTICLE_ELEMENT_TPL = "//*[@class='android.widget.LinearLayout' and @index='{INDEX}']",
+        SEARCH_ITEM_TITLE = "org.wikipedia:id/page_list_item_title",
         SEARCH_RESULT_ARTICLE_ELEMENT_WITH_TEXT = "//*[@class='android.widget.LinearLayout']//*[@text='{TEXT}']";
 
 
@@ -116,8 +122,36 @@ public class SearchPageObject extends MainPageObject {
 
         this.waitForElementPresent(
                 By.xpath(SEARCH_RESULT_ARTICLE_ELEMENT_1), "Can't finds articles - search result is empty", 10);
-
-
     }
 
-}
+
+
+    //для задания 4
+    public void checkAllSearchResultsWithJava()
+    {
+        List<WebElement> search_results = waitForElementsPresent(
+        By.xpath(SEARCH_RESULT_ELEMENT), "Can't find search results elements", 5);
+
+        List <String> searchResultTitle = new ArrayList<>();
+        for (WebElement element:search_results){
+        searchResultTitle.add(element.findElement(By.id(SEARCH_ITEM_TITLE)).getText());
+        }
+        for (int i = 0; i < searchResultTitle.size();
+             i++)
+        {
+        assertTrue(
+                "can't find Java in search result №" + i,
+                searchResultTitle.get(i).contains("Java")||searchResultTitle.get(i).contains("java"));
+        }
+
+    }
+        private List<WebElement> waitForElementsPresent(By by, String error_message, long timeoutInSeconds ){
+
+        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+        wait.withMessage(error_message + "\n");
+
+        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+        }
+    }
+
+
