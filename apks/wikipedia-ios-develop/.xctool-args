@@ -1,7 +1,0 @@
-[
-  "-workspace", "Wikipedia.xcworkspace",
-  "-scheme", "Wikipedia",
-  "-configuration", "Debug",
-  "-sdk", "iphonesimulator",
-  "-destination", "platform=iOS Simulator,name=iPhone 6,OS=10.0"
-]
