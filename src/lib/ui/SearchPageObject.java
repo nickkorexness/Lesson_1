@@ -125,33 +125,33 @@ public class SearchPageObject extends MainPageObject {
     }
 
 
-
-    //для задания 4
-    public void checkAllSearchResultsWithJava()
-    {
-        List<WebElement> search_results = waitForElementsPresent(
-        By.xpath(SEARCH_RESULT_ELEMENT), "Can't find search results elements", 5);
-
-        List <String> searchResultTitle = new ArrayList<>();
-        for (WebElement element:search_results){
-        searchResultTitle.add(element.findElement(By.id(SEARCH_ITEM_TITLE)).getText());
-        }
-        for (int i = 0; i < searchResultTitle.size();
-             i++)
-        {
-        assertTrue(
-                "can't find Java in search result №" + i,
-                searchResultTitle.get(i).contains("Java")||searchResultTitle.get(i).contains("java"));
-        }
-
-    }
-        private List<WebElement> waitForElementsPresent(By by, String error_message, long timeoutInSeconds ){
-
-        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
-        wait.withMessage(error_message + "\n");
-
-        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
-        }
-    }
+//
+//    //для задания 4
+//    public void checkAllSearchResultsWithJava()
+//    {
+//        List<WebElement> search_results = waitForElementsPresent(
+//        By.xpath(SEARCH_RESULT_ELEMENT), "Can't find search results elements", 5);
+//
+//        List <String> searchResultTitle = new ArrayList<>();
+//        for (WebElement element:search_results){
+//        searchResultTitle.add(element.findElement(By.id(SEARCH_ITEM_TITLE)).getText());
+//        }
+//        for (int i = 0; i < searchResultTitle.size();
+//             i++)
+//        {
+//        assertTrue(
+//                "can't find Java in search result №" + i,
+//                searchResultTitle.get(i).contains("Java")||searchResultTitle.get(i).contains("java"));
+//        }
+//
+//    }
+//        private List<WebElement> waitForElementsPresent(By by, String error_message, long timeoutInSeconds ){
+//
+//        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+//        wait.withMessage(error_message + "\n");
+//
+//        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+//        }
+//    }
 
 

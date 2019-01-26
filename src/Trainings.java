@@ -105,16 +105,16 @@ public class Trainings extends CoreTestCase {
 
     }
 
-    @Test
-    public void test_ex4_check_words_in_search()
-    {
-        //ищем слово и проверяем его наличие в результатах поиска
-        //открываем поиск и вводим строку для поиска
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
-        SearchPageObject.initSearchInput();
-        SearchPageObject.typeSearchLine("Java");
-        SearchPageObject.checkAllSearchResultsWithJava();
-        }
+//    @Test
+//    public void test_ex4_check_words_in_search()
+//    {
+//        //ищем слово и проверяем его наличие в результатах поиска
+//        //открываем поиск и вводим строку для поиска
+//        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+//        SearchPageObject.initSearchInput();
+//        SearchPageObject.typeSearchLine("Java");
+//        SearchPageObject.checkAllSearchResultsWithJava();
+//        }
 
 
 
