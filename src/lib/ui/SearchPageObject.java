@@ -2,6 +2,9 @@ package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import static junit.framework.TestCase.assertEquals;
 
 public class SearchPageObject extends MainPageObject {
 
@@ -13,7 +16,9 @@ public class SearchPageObject extends MainPageObject {
         NO_RESULT_LABEL = "//*[contains(@text,'No results found')]",
         SEARCH_RESULT_ELEMENT = "//*[@resource-id='org.wikipedia:id/search_results_list']//*[@resource-id='org.wikipedia:id/page_list_item_container']",
         SEARCH_RESULT_ARTICLE_ELEMENT_0 = "//*[@class='android.widget.LinearLayout' and @index='0']",
-        SEARCH_RESULT_ARTICLE_ELEMENT_1 = "//*[@class='android.widget.LinearLayout' and @index='2']";
+        SEARCH_RESULT_ARTICLE_ELEMENT_1 = "//*[@class='android.widget.LinearLayout' and @index='2']",
+        SEARCH_RESULT_ARTICLE_ELEMENT_TPL = "//*[@class='android.widget.LinearLayout' and @index='{INDEX}']",
+        SEARCH_RESULT_ARTICLE_ELEMENT_WITH_TEXT = "//*[@class='android.widget.LinearLayout']//*[@text='{TEXT}']";
 
 
     /* template methods*/
@@ -23,6 +28,15 @@ public class SearchPageObject extends MainPageObject {
         return SEARCH_RESULT_BY_SUBSTRING_TPL.replace("{SUBSTRING}", substring);
     }
 
+    private static String getResultArticleElement(String substring)
+    {
+        return SEARCH_RESULT_ARTICLE_ELEMENT_WITH_TEXT.replace("{TEXT}", substring);
+    }
+
+    private static String getArticleElement(String index)
+    {
+        return SEARCH_RESULT_ARTICLE_ELEMENT_TPL.replace("{INDEX}", index);
+    }
 
     /* template methods*/
 

@@ -1,6 +1,7 @@
 import lib.CoreTestCase;
 import lib.ui.*;
 import org.junit.Test;
+import org.openqa.selenium.WebElement;
 
 
 public class Trainings extends CoreTestCase {
@@ -106,12 +107,16 @@ public class Trainings extends CoreTestCase {
     }
 
     @Test
-    public void ex4_check_words_in_search()
+    public void test_ex4_check_words_in_search()
     {
 
         SearchPageObject SearchPageObject = new SearchPageObject(driver);
         SearchPageObject.initSearchInput();
-        SearchPageObject.typeSearchLine("Cyprus");
+        SearchPageObject.typeSearchLine("Java");
+        SearchPageObject.compareSearchResults("Java");
+        }
+
+
 
     }
 
@@ -143,4 +148,3 @@ public class Trainings extends CoreTestCase {
 //
 //    }
 
-}
