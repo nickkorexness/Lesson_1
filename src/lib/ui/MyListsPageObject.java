@@ -12,9 +12,9 @@ public class MyListsPageObject extends MainPageObject {
 
 
     public final static String
-        FOLDER_BY_NAME_TPL = "//*[@text='Learning programming']",
-        ARTICLE_BY_TITLE_TPL = "//*[@text ='{TITLE}']",
-        ARTICLE_TITLE = "//*[@resource-id='org.wikipedia:id/page_list_item_title' and @index='0']";
+        FOLDER_BY_NAME_TPL = "xpath://*[@text='Learning programming']",
+        ARTICLE_BY_TITLE_TPL = "xpath://*[@text ='{TITLE}']",
+        ARTICLE_TITLE = "xpath://*[@resource-id='org.wikipedia:id/page_list_item_title' and @index='0']";
 
 
 
@@ -34,7 +34,7 @@ public class MyListsPageObject extends MainPageObject {
     {
         String folder_name_xpath = getFolderXpathByName(name_of_folder);
         this.waitForElementAndClick(
-                By.xpath(folder_name_xpath),
+                folder_name_xpath,
                 "Cant find  folder by name " + name_of_folder,
                 15
         );
@@ -45,7 +45,7 @@ public class MyListsPageObject extends MainPageObject {
         String article_xpath = getSavedArticleXpathByTitle(article_title);
         this.waitForArticleToAppearByTitle(article_title);
         this.swipeElementToLeft(
-                By.xpath(article_xpath),
+                article_xpath,
                 "Cant find saved article"
         );
         this.waitForArticleToDissappearByTitle(article_title);
@@ -55,20 +55,20 @@ public class MyListsPageObject extends MainPageObject {
     public void waitForArticleToDissappearByTitle(String article_title)
     {
         String article_xpath = getSavedArticleXpathByTitle(article_title);
-        this.waitForElementNotPresent(By.xpath(article_xpath), "Cant delete saved article", 10
+        this.waitForElementNotPresent(article_xpath, "Cant delete saved article", 10
         );
     }
 
     public void waitForArticleToAppearByTitle(String article_title)
     {
         String article_xpath = getFolderXpathByName(article_title);
-        this.waitForElementPresent(By.xpath(article_xpath), "Cant find article by title", 10
+        this.waitForElementPresent(article_xpath, "Cant find article by title", 10
         );
     }
 
     public void openArticle()
     {
-        this.waitForElementAndClick(By.xpath(ARTICLE_TITLE), "Can't open first article on mylists screen", 5);
+        this.waitForElementAndClick(ARTICLE_TITLE, "Can't open first article on mylists screen", 5);
     }
 
 

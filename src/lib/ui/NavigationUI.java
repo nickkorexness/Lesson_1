@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 public class NavigationUI extends MainPageObject {
 
     private static final String
-    MY_LISTS_BTN = "//android.widget.FrameLayout[@content-desc='My lists']";
+    MY_LISTS_BTN = "xpath://android.widget.FrameLayout[@content-desc='My lists']";
 
 
     public NavigationUI (AppiumDriver driver)
@@ -17,7 +17,7 @@ public class NavigationUI extends MainPageObject {
     public void clickMyLists()
     {
         this.waitForElementAndClick(
-                By.xpath(MY_LISTS_BTN),
+                MY_LISTS_BTN,
                 "Cant open 'my lists' screen ",
                 15
         );
