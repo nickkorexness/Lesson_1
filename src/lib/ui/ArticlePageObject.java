@@ -1,21 +1,22 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import lib.Platform;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class ArticlePageObject extends MainPageObject {
+abstract  public class ArticlePageObject extends MainPageObject {
 
-    private static final String
-            ARTICLE_TITLE_ELEMENT = "id:org.wikipedia:id/view_page_title_text",
-            FOOTER_ELEMENT = "xpath://*[@text='View page in browser']",
-            MORE_OPTIONS_BTN = "xpath://android.widget.ImageView[@content-desc='More options']",
-            ADD_TO_READING_LIST_BTN = "xpath://*[@text ='Add to reading list']",
-            GOT_IT_BTN = "id:org.wikipedia:id/onboarding_button",
-            OK_BTN = "xpath://*[@text ='OK']",
-            MY_LIST_INPUT = "id:org.wikipedia:id/text_input",
-            ARTICLE_CLOSE_BTN = "xpath://android.widget.ImageButton[@content-desc='Navigate up']",
-            MYLIST_FOLDER_ELEMENT= "xpath://*[@resource-id='org.wikipedia:id/item_container' and @index='0']";
+    protected static String
+            ARTICLE_TITLE_ELEMENT,
+            FOOTER_ELEMENT,
+            MORE_OPTIONS_BTN,
+            ADD_TO_READING_LIST_BTN ,
+            GOT_IT_BTN ,
+            OK_BTN ,
+            MY_LIST_INPUT ,
+            ARTICLE_CLOSE_BTN ,
+            MYLIST_FOLDER_ELEMENT ;
 
 
 
@@ -33,13 +34,21 @@ public class ArticlePageObject extends MainPageObject {
     public String getArticleTitle()
     {
         WebElement titleElement = waitForTitleElement();
-        return titleElement.getAttribute("text");
+        if (Platform.getInstance().isAndroid()){
+            return titleElement.getAttribute("text");
+        } else {return
+            titleElement.getAttribute("name");
+        }
     }
 
     public void swipeToFooter()
     {
-        this.swipeUpToFindElement(FOOTER_ELEMENT, "cant find footer element", 10
-        );
+        if(Platform.getInstance().isAndroid()){
+            this.swipeUpToFindElement(FOOTER_ELEMENT, "cant find footer element", 40);
+        } else {
+            this.swipeUpTillElementAppeared(FOOTER_ELEMENT,"cant find footer element", 50);
+        }
+
     }
 
     public void addFirstArticleToMyList(String name_of_folder)
@@ -114,5 +123,10 @@ public class ArticlePageObject extends MainPageObject {
     public void checkArticleTitleWithTimeout(int timeout)
     {
         this.waitForElementPresent(ARTICLE_TITLE_ELEMENT,"cant find article element on article page with "+ timeout + " timeout", timeout);
+    }
+
+    public void addArticlesToMySaved()
+    {
+        this.waitForElementAndClick(ADD_TO_READING_LIST_BTN,"can't click and add article to my favorites",5);
     }
 }

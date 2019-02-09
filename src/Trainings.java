@@ -1,5 +1,11 @@
 import lib.CoreTestCase;
+import lib.Platform;
 import lib.ui.*;
+import lib.ui.factories.ArticlePageObjectFactory;
+import lib.ui.factories.MyListsPageObjectFactory;
+import lib.ui.factories.NavigationUIFactory;
+import lib.ui.factories.SearchPageObjectFactory;
+import lib.ui.iOS.WelcomePageObject;
 import org.junit.Test;
 
 
@@ -29,7 +35,7 @@ public class Trainings extends CoreTestCase {
     public void test_ex3_cancel_search()
     {
 
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Cyprus");
         SearchPageObject.getAmountOfFoundArticles();
@@ -42,13 +48,13 @@ public class Trainings extends CoreTestCase {
     @Test
     public void test_ex5_two_articles()
     {
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Java");
         SearchPageObject.clickByArticleWithSubstring("Object-oriented programming language");
 
-        ArticlePageObject ArticlePageObject = new ArticlePageObject(driver);
+        ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
         ArticlePageObject.waitForTitleElement();
 
         String article_title = ArticlePageObject.getArticleTitle();
@@ -67,9 +73,9 @@ public class Trainings extends CoreTestCase {
         ArticlePageObject.closeArticle();
 
         // открываем папку и удаляем
-        NavigationUI NavigationUI = new NavigationUI(driver);
+        NavigationUI NavigationUI = NavigationUIFactory.get(driver);
         NavigationUI.clickMyLists();
-        MyListsPageObject MyListsPageObject = new MyListsPageObject(driver);
+        MyListsPageObject MyListsPageObject = MyListsPageObjectFactory.get(driver);
 
         MyListsPageObject.openFolderByName(name_of_folder);
         MyListsPageObject.swipeArticleToDelete(article_title);
@@ -94,13 +100,13 @@ public class Trainings extends CoreTestCase {
     public void test_ex6_title()
     {
 
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Limassol");
         SearchPageObject.clickByArticleWithSubstring("City in Cyprus");
 
-        ArticlePageObject ArticlePageObject = new ArticlePageObject(driver);
+        ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
         ArticlePageObject.checkArticleTitleWithTimeout(0);
 
     }
@@ -110,15 +116,56 @@ public class Trainings extends CoreTestCase {
     {
         //ищем слово и проверяем его наличие в результатах поиска
         //открываем поиск и вводим строку для поиска
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Java");
         SearchPageObject.checkAllSearchResultsWithJava();
         }
 
+    @Test
+    public void test_ex11_ios_version_for_ex5()
+    {
+        ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
+        NavigationUI NavigationUI = NavigationUIFactory.get(driver);
+        MyListsPageObject MyListsPageObject = MyListsPageObjectFactory.get(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
+        String name_of_folder = "Learning programming";
+        //save 1st article
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Java");
+        SearchPageObject.clickByArticleWithSubstring("Object-oriented programming language");
+        //ArticlePageObject.waitForTitleElement();
+        //String article_title = ArticlePageObject.getArticleTitle();
+        if (Platform.getInstance().isAndroid()){
+            ArticlePageObject.addFirstArticleToMyList(name_of_folder);
+        }else {
+            ArticlePageObject.addArticlesToMySaved();
+        }
+        ArticlePageObject.closeArticle();
 
+        //save 2nd article
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Java");
+        SearchPageObject.clickByArticleWithSubstring("Object-oriented programming language");
+        //ArticlePageObject.waitForTitleElement();
+        //String article_title2 = ArticlePageObject.getArticleTitle();
+        if (Platform.getInstance().isAndroid()){
+            ArticlePageObject.addFirstArticleToMyList(name_of_folder);
+        }else {
+            ArticlePageObject.addArticlesToMySaved();
+        }
+        ArticlePageObject.closeArticle();
+        NavigationUI.clickMyLists();
+        if (Platform.getInstance().isAndroid()){
+            MyListsPageObject.openFolderByName(name_of_folder);
+        }
+
+        //MyListsPageObject.swipeArticleToDelete(article_title2);
     }
+
+
+}
 
 
 

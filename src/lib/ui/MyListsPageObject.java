@@ -1,9 +1,9 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.By;
+import lib.Platform;
 
-public class MyListsPageObject extends MainPageObject {
+abstract public class MyListsPageObject extends MainPageObject {
 
     public MyListsPageObject(AppiumDriver driver)
     {
@@ -11,10 +11,10 @@ public class MyListsPageObject extends MainPageObject {
     }
 
 
-    public final static String
-        FOLDER_BY_NAME_TPL = "xpath://*[@text='Learning programming']",
-        ARTICLE_BY_TITLE_TPL = "xpath://*[@text ='{TITLE}']",
-        ARTICLE_TITLE = "xpath://*[@resource-id='org.wikipedia:id/page_list_item_title' and @index='0']";
+    protected static String
+        FOLDER_BY_NAME_TPL,
+        ARTICLE_BY_TITLE_TPL,
+        ARTICLE_TITLE;
 
 
 
@@ -48,6 +48,11 @@ public class MyListsPageObject extends MainPageObject {
                 article_xpath,
                 "Cant find saved article"
         );
+
+        if (Platform.getInstance().isIOS()){
+            this.clickElementToUpperRightCorner(article_xpath,"cannot find saved article");
+        }
+
         this.waitForArticleToDissappearByTitle(article_title);
 
     }
