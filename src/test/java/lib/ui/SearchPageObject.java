@@ -25,9 +25,9 @@ public abstract class SearchPageObject extends MainPageObject {
                 SEARCH_RESULT_ARTICLE_ELEMENT_0 ,
                 SEARCH_RESULT_ARTICLE_ELEMENT_1 ,
                 SEARCH_RESULT_ARTICLE_ELEMENT_TPL ,
-//                SEARCH_ITEM_TITLE ,
-//                SEARCH_IN_SAVED,
-//                NO_SAVED_LABEL,
+                SEARCH_ITEM_TITLE ,
+                SEARCH_IN_SAVED,
+                NO_SAVED_LABEL,
                 SEARCH_RESULT_ARTICLE_ELEMENT_WITH_TEXT ;
 
 
@@ -127,15 +127,15 @@ public abstract class SearchPageObject extends MainPageObject {
             this.waitForElementPresent(SEARCH_RESULT_ARTICLE_ELEMENT_1, "Can't finds articles - search result is empty", 10);
         }
 
-//        public void searchArticleInSaved(String search_line){
-//            this.waitForElementAndClick(SEARCH_IN_SAVED,"cant find input in saved",5);
-//            this.waitForElementAndSendKeys(SEARCH_IN_SAVED,search_line,"cant find input in saved",5);
-//        }
-//
-//        public void checkNoSavedArticles()
-//        {
-//            this.waitForElementNotPresent(NO_SAVED_LABEL,"there is no articles on page",5);
-//        }
+        public void searchArticleInSaved(String search_line){
+            this.waitForElementAndClick(SEARCH_IN_SAVED,"cant find input in saved",5);
+            this.waitForElementAndSendKeys(SEARCH_IN_SAVED,search_line,"cant find input in saved",5);
+        }
+
+        public void checkNoSavedArticles()
+        {
+            this.waitForElementNotPresent(NO_SAVED_LABEL,"there is no articles on page",5);
+        }
 
     //для задания 4
 //    public void checkAllSearchResultsWithJava()
