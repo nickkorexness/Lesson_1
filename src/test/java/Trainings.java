@@ -134,10 +134,11 @@ public class Trainings extends CoreTestCase {
         String name_of_folder = "Learning programming";
         //save 1st article
         SearchPageObject.initSearchInput();
-        SearchPageObject.typeSearchLine("Java");
+        //SearchPageObject.typeSearchLine("Java");
         SearchPageObject.clickByArticleWithSubstring("Object-oriented programming language");
-        //ArticlePageObject.waitForTitleElement();
-        //String article_title = ArticlePageObject.getArticleTitle();
+        ArticlePageObject.waitForTitleElement();
+
+        String java_title = ArticlePageObject.getArticleTitle();
         if (Platform.getInstance().isAndroid()){
             ArticlePageObject.addFirstArticleToMyList(name_of_folder);
         }else {
@@ -147,22 +148,32 @@ public class Trainings extends CoreTestCase {
 
         //save 2nd article
         SearchPageObject.initSearchInput();
-        SearchPageObject.typeSearchLine("Java");
-        SearchPageObject.clickByArticleWithSubstring("Object-oriented programming language");
-        //ArticlePageObject.waitForTitleElement();
-        //String article_title2 = ArticlePageObject.getArticleTitle();
+        SearchPageObject.typeSearchLine("Cyprus");
+        SearchPageObject.clickByArticleWithSubstring("Island country in Mediterranean");;
+        ArticlePageObject.waitForTitleElement();
+        String cyprus_title2 = ArticlePageObject.getArticleTitle();
         if (Platform.getInstance().isAndroid()){
             ArticlePageObject.addFirstArticleToMyList(name_of_folder);
         }else {
             ArticlePageObject.addArticlesToMySaved();
         }
         ArticlePageObject.closeArticle();
+
         NavigationUI.clickMyLists();
         if (Platform.getInstance().isAndroid()){
             MyListsPageObject.openFolderByName(name_of_folder);
         }
 
-        //MyListsPageObject.swipeArticleToDelete(article_title2);
+        MyListsPageObject.swipeArticleToDelete(java_title);
+
+        if (Platform.getInstance().isIOS()){
+            SearchPageObject.searchArticleInSaved("Cyprus");
+            SearchPageObject.checkNoSavedArticles();
+        }
+
+
+
+
     }
 
     @Test

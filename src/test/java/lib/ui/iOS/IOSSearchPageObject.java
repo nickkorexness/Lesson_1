@@ -17,6 +17,8 @@ public class IOSSearchPageObject extends SearchPageObject {
         SEARCH_RESULT_ARTICLE_ELEMENT_TPL = "";
         SEARCH_ITEM_TITLE = "";
         SEARCH_RESULT_ARTICLE_ELEMENT_WITH_TEXT = "";
+        SEARCH_IN_SAVED="xpath://XCUIElementTypeSearchField[@name='Search']";
+        NO_SAVED_LABEL="//XCUIElementTypeStaticText[@name='No saved pages yet']";
     }
 
     public IOSSearchPageObject(RemoteWebDriver driver)

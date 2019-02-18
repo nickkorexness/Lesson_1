@@ -79,8 +79,8 @@ public class Platform {
     {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("deviceName", "5s11");
-        capabilities.setCapability("platformVersion", "11.3");
+        capabilities.setCapability("deviceName", "iPhone SE");
+        capabilities.setCapability("platformVersion", "12.1");
         capabilities.setCapability("app", "/Users/nickolay/Lesson_1/apks/Wikipedia.app");
         return capabilities;
     }
