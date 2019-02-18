@@ -169,6 +169,7 @@ public class Trainings extends CoreTestCase {
         if (Platform.getInstance().isIOS()){
             SearchPageObject.searchArticleInSaved("Cyprus");
             SearchPageObject.checkNoSavedArticles();
+            
         }
 
 
